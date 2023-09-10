@@ -31,17 +31,22 @@ void Transaction::make_transaction(std::istream& ins){
 	
 	string dump;
 	getline(ins, dump);
-
 	cout << dump << endl;
+	
 	ins >> date;
 	cout << date << endl;
+
 	getline(ins, dump);
+	cout << dump << endl;
+
 	getline(ins, other_party);
+	cout << other_party << endl;
 
 	ins >> amount;
+	cout << amount << endl;
 
 	getline(ins, dump);
-
+	cout << dump << endl;
 }
 
 // * Data is output in the order: num, date, other_party, amount
