@@ -51,7 +51,7 @@ void CheckingAcct::remove(const int rmnum) {
         i++;
     }
 
-    transactions[i + 1] = tmp;
+    transactions[i] = tmp;
     transactionCount--;
 }
 

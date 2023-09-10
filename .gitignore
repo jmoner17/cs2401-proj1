@@ -38,3 +38,6 @@
 *.exe
 *.out
 *.app
+
+#Teh fackign text file
+*.txt
