@@ -1,15 +1,16 @@
+4351.65
 1
-9/1/2023
-Dave's Carryout
-18.49
+9/10/2023
+Baker's Bakery
+48.92
 2
 9/2/202023
 Ohio University
 2345.75
 3
-9/3/2023
-Starbucks
-57.23
+9/7/2023
+Museum of History
+65.43
 4
 9/4/2023
 City Library
@@ -19,9 +20,9 @@ City Library
 Johnson's Electronics
 178.45
 7
-9/7/2023
-Museum of History
-65.43
+9/3/2023
+Starbucks
+57.23
 8
 9/8/2023
 Greenwood Mall
@@ -31,6 +32,6 @@ Greenwood Mall
 Sunset Cinema
 23.56
 10
-9/10/2023
-Baker's Bakery
-48.92
+9/1/2023
+Dave's Carryout
+18.49

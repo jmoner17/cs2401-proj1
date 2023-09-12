@@ -68,7 +68,7 @@ int main(){
 				cout << "Account balance: $" << myacct.get_balance() << endl;
 				break;
 			case 4:
-				//myacct.show_all(cout);
+				myacct.show_all(cout);
 				break;
 			case 5:
 				cout << "Enter the number of the transaction to be removed: ";
@@ -76,23 +76,23 @@ int main(){
 				myacct.remove(rmnum);
 				break;
 			case 6:
-				//myacct.number_sort();
+				myacct.number_sort();
 				break;
 			case 7:
-				//myacct.other_party_sort();
+				myacct.other_party_sort();
 				break;
 			case 8:
-				//myacct.date_sort();
+				myacct.date_sort();
 				break;
 			case 9:
 				while(cin.peek() == '\n' || cin.peek() == '\r'){
 					cin.ignore(); // clear out leftover newlines
 				}
 				getline(cin, other);
-				//myacct.show(other);
+				myacct.show(other);
 				break;
 			case 10:
-				//cout << "Your average transaction amount: $" << myacct.average() << endl;
+				cout << "Your average transaction amount: $" << myacct.average() << endl;
 				break;
 			case 0:
 				cout << "Thank you for using the CheckingAcct program.\n";

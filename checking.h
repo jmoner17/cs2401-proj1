@@ -25,26 +25,26 @@ class CheckingAcct {
         void save(ofstream& ofs) const;
 
         //Sorting functions
-        //number_sort();
+        void number_sort();
 
-        //other_party_sort();
+        void other_party_sort();
 
-        //date_sort();
+        void date_sort();
         //getters
 
         double get_balance() const;
 
-        //show(string& other);
+        void show(const string& other)const;
 
         void show_all(ostream& cout) const;
 
         //member functions
-        //average();
+        double average() const;
+
  
     private:
         Transaction transactions[200];
         size_t transactionCount;
         double balance;
-
 };
 #endif
