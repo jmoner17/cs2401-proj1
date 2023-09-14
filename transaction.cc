@@ -41,7 +41,7 @@ void Transaction::make_transaction(std::istream& ins){
 		cout << "Enter the other party's name: ";
 		getline(ins, other_party);
 
-		cout << "Enter the amount you would like to transfer";
+		cout << "Enter the amount you would like to transfer: ";
 		ins >> amount;
 
 		getline(ins, dump);

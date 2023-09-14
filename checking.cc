@@ -13,8 +13,8 @@ void CheckingAcct::new_transaction(istream& cin) {
     
     if(transactionCount < 200) {
         transactions[transactionCount].make_transaction(cin);
-        balance += transactions[transactionCount].get_amount();
-        transactionCount++; 
+        balance -= transactions[transactionCount].get_amount();
+        transactionCount++;
     }
     else {
         cout << "Transaction limit reached" << endl;
@@ -96,21 +96,26 @@ void CheckingAcct::save(ofstream& ofs) const{
     }
 }
 
-void CheckingAcct::number_sort() {
+void CheckingAcct::number_sort() { //selection sort
     Transaction temp; 
-
+    int lowest;
+    int pos;
     for(int i = 0; i < transactionCount - 1; i++) {
-        for(int j = 0; j < transactionCount - i - 1; j++) {
-            if(transactions[j].get_num() > transactions[j + 1].get_num()) {
-                temp = transactions[j + 1];
-                transactions[j + 1] = transactions[j];
-                transactions[j] = temp;
+        int lowest = transactions[i].get_num();
+        pos = i;
+        for(int j = i + 1; j < transactionCount; j++) {
+            if(lowest > transactions[j].get_num()) {
+                lowest = transactions[j].get_num();
+                pos = j;
             }
         }
+        temp = transactions[i];
+        transactions[i] = transactions[pos];
+        transactions[pos] = temp;
     }
 }
 
-void CheckingAcct::other_party_sort() {
+void CheckingAcct::other_party_sort() { //bubble sort
     Transaction temp;
 
     for(int i = 0; i < transactionCount - 1; i++) {
@@ -124,16 +129,16 @@ void CheckingAcct::other_party_sort() {
     }
 }
 
-void CheckingAcct::date_sort() {
+void CheckingAcct::date_sort() { //insertion sort
     Transaction temp;
 
-    for(int i = 0; i < transactionCount - 1; i++) {
-        for(int j = 0; j < transactionCount - i - 1; j++) {
-            if(transactions[j].get_date() > transactions[j + 1].get_date()) {
-                temp = transactions[j + 1];
-                transactions[j + 1] = transactions[j];
-                transactions[j] = temp;
-            }
+    for(int i = 1; i < transactionCount; i++) {
+        int j = i;
+        while(j > 0 && transactions[j - 1].get_date() > transactions[j].get_date()) {
+            temp = transactions[j - 1];
+            transactions[j - 1] = transactions[j];
+            transactions[j] = temp;
+            j--;
         }
     }
 }
