@@ -50,9 +50,13 @@ void CheckingAcct::remove(const int rmnum) {
         transactions[i] = transactions[i + 1];
         i++;
     }
-
-    transactions[i] = tmp;
-    transactionCount--;
+    
+    if(i != transactionCount) {
+        transactionCount--;
+    }
+    else {
+        cout << "Transaction number not found" << endl;
+    }
 }
 
 

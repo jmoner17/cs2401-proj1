@@ -27,7 +27,7 @@ void Transaction::make_transaction(std::istream& ins){
 	/** this compares to see if ins has the same memory address 
 	   	as cin. if they do we activate the UI to assist in entering
 	 	parameters */
-	if(&ins == &std::cin) {
+	if(&ins == &cin) {
 		cout << "Enter a transaction number: ";
 		ins >> num;
 
@@ -67,16 +67,12 @@ void Transaction::make_transaction(std::istream& ins){
 
 // * Data is output in the order: num, date, other_party, amount
 // * am assuming that each piece of data should be written on a new line
-void Transaction::output(std::ostream& outs)const{
+void Transaction::output(std::ostream& outs) const{
 
 	outs << num << endl;
 	outs << date << endl;
 	outs << other_party << endl;
 	outs << amount << endl;
-	/* You are to write the implementation of this function to write 
-	to the monitor or to a file. Remember not to put labels into the 
-	file.*/
-
 }
 
 ostream& operator << (ostream& outs, const Transaction& c){
